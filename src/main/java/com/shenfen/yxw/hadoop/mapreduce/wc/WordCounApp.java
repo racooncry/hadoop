@@ -20,8 +20,9 @@ public class WordCounApp {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         System.setProperty("HADOOP_USER_NAME","root");
-        System.setProperty("hadoop.home.dir", "E:\\all\\coderme\\hadoop\\hadoop-2.6.0-cdh5.16.2");
-
+       // System.setProperty("hadoop.home.dir", "E:\\all\\coderme\\hadoop\\hadoop-2.6.0-cdh5.16.2");
+        // 加载库文件
+        System.load("E:\\all\\coderme\\hadoop\\hadoop-2.6.0-cdh5.16.2\\bin\\hadoop.dll");
         Configuration configuration = new Configuration();
         configuration.set("fs.defaultFS", "hdfs://hadoop001:8020");
         // 创建一个job
