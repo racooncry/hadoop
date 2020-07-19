@@ -5,6 +5,7 @@ public class WordCountMapper implements CustomMapper {
     public void map(String line, CustomContext customContext) {
         String[] words = line.toLowerCase().split("\t");
         for (String word : words) {
+            System.out.println(word);
             Object value = customContext.get(word);
             if (value == null) {
                 customContext.write(word, 1);
